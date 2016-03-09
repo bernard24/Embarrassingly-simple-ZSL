@@ -126,8 +126,8 @@ while 1>0
     KYS_invSS=KYS/(S'*S+sigma*eye(size(S,2)));
     disp('Learning...');
 
-%     Alpha=(KK+lambda*KTrain)\KYS_invSS;
-    Alpha=(KK+lambda*eye(size(KTrain)))\KYS_invSS;
+     Alpha=(KK+lambda*KTrain)\KYS_invSS;
+%    Alpha=(KK+lambda*eye(size(KTrain)))\KYS_invSS;
 
     disp('Predicting...');
     KTest=K(testInstancesIndices,trainInstancesIndices);
